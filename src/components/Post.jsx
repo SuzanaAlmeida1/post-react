@@ -1,16 +1,18 @@
+import { Avatar } from './Avatar';
 import { Comment } from './Comment';
 import styles from './Post.module.css';
 
 
-export function Post(){
+export function Post() {
   return (
   <article className={styles.post}>
     <header>
       <div className={styles.author}>
-        <img src="https://github.com/SuzanaAlmeida1.png"/>
-        <div className={styles.authorInfo}></div>
+        <Avatar hasBorder src="https://github.com/SuzanaAlmeida1.png" />
+        <div className={styles.authorInfo}>
         <strong>Suzana Almeida</strong>
         <span>Web Developer</span>
+        </div>
       </div>
 
       <time title="06 de abril de  2023 às 21:01" dateTime="06-04-2023 21:01:30"></time>

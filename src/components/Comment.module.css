@@ -4,12 +4,6 @@
   gap: 1rem;
 }
 
-.comment > img {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 8px; /* não utiliza "rem" pois não representa tamanhos*/
-}
-
 .commentBox {
   flex: 1;
 }
@@ -28,7 +22,7 @@
 
 .commentContent header button {
   background: transparent;
-  border:0;
+  border: 0;
   color: var(--gray-400);
   cursor: pointer;
   line-height: 0;
@@ -38,7 +32,6 @@
 .commentContent header button:hover {
   color: var(--red-500);
 }
-
 
 .authorAndTime strong {
   display: block;
@@ -81,7 +74,6 @@
 }
 
 .commentBox footer button span::before {
-  content: "\2022";
+  content: '\2022';
   padding: 0 0.25rem;
 }
-
