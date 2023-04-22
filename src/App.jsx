@@ -10,6 +10,47 @@ import styles from './App.module.css';
 import './global.css';
 
 
+
+// author: {avatar_url:" ", name:" ", role: " "}
+// publishedAt: Date
+// content: String
+
+
+const posts = [
+ { id: 1,
+
+  author: {
+    avatarUrl: 'https://github.com/SuzanaAlmeida1.png',
+    name: 'Suzana Almeida',
+    role: 'Engenheira'
+  },
+   content: [
+    {type: 'paragraph', content: 'Fala galeraa 👋',},
+    {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome doprojeto é DoctorCare 🚀👉'}, 
+    {type:'link', content: 'jane.design/doctorcare'},
+        
+   ],
+
+   publishedAt: new Date('2023-04-14 20:00:00'),
+ },
+ { id: 2,
+
+  author: {
+    avatarUrl: 'https://github.com/gvergnaud.png',
+    name: 'Gabriel Vergnaud',
+    role: 'Type-level TypeScript nerd — Building'
+  },
+   content: [
+    {type: 'paragraph', content: 'Fala galeraa 👋',},
+    {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome doprojeto é DoctorCare 🚀👉'}, 
+    {type:'link', content: 'jane.design/doctorcare'},
+        
+   ],
+
+   publishedAt: new Date('2023-04-10 20:00:00'),
+ },
+];
+
 export function App() {
  
 
@@ -23,14 +64,18 @@ export function App() {
         <Sidebar />
           
           <main>
-          <Post 
-            author="Su" 
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ab tenetur totam dolorum officia inventore sapiente culpa. Molestias adipisci fugit sapiente numquam optio quis, deleniti perspiciatis hic, commodi debitis officia?"  
-         />
-         <Post 
-             author="Edu" 
-             content="Um novo post!" 
-          />
+         {posts.map(post => {
+          return (
+          
+            <Post 
+            key={post.id}
+            author={post.author}
+            content={post.content}
+            publishedAt={post.publishedAt}
+          
+            />
+          )
+         })}
          </main>
         </div>
     </div>
